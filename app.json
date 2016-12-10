@@ -1,6 +1,8 @@
 {
 "name":"Draw with me",
 "description":"A game made with javascript, p5 and socketIO",
-"repository": "github.com/popostrus/DrawWithMe",
-"keywords":["node","p5"]
+"repository": "http://github.com/popostrus/DrawWithMe",
+"logo": "http://node-js-sample.herokuapp.com/node.svg",
+"keywords":["node","p5"],
+"image": "heroku/nodejs"
 }
