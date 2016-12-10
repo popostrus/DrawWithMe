@@ -3,7 +3,7 @@ var app=express();
 
 
 app.get('/', function(request, response) {
-  response.render('public/index');
+  response.render('index');
 });
 
 app.listen(process.env.PORT || 8080, function(){
