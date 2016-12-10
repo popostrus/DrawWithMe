@@ -1,7 +1,12 @@
 var express= require('express');
 var app=express();
-app.set('port',(process.env.PORT));
-app.listen(process.env.PORT || 3000, function(){
+
+
+app.get('/', function(request, response) {
+  response.render('public/index');
+});
+
+app.listen(process.env.PORT || 8080, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 var server=app.listen("80");
