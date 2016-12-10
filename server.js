@@ -1,5 +1,6 @@
 var express= require('express');
 var app=express();
+app.set('port',(process.env.PORT))
 var server=app.listen("80");
 app.use(express.static('public'));
 console.log("The Socket is running.");
