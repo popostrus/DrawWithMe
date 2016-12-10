@@ -1,0 +1,39 @@
+<html>
+<head>
+<script src="p5.js"></script>
+<script src="p5.dom.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+  <h1>
+    Draw with me
+  </h1>
+  <h1 id="waitForPlayers" >
+    Waiting for Players.
+  </h1>
+  <center>
+    <div id="nicknameDiv">
+  Nickname: <input type="text" name="MyNickname" id="MyNickname">
+  <button type="button" class="btn" name="SubmitNickname"  onclick="ConnectServer()">Connect ></button>
+</div>
+</center>
+<div id="scores">
+  <h3>Score:</h3>
+  <p id=players>
+  </p>
+</div>
+  <div id="SendBar">
+    <center>
+  <input type="text" name="MyWord" id="SubmitWord">
+  <button type="button" class="btn" name="Submit"  onclick="SendGuess()">Send</button>
+</center>
+</div>
+</body>
+</html>
