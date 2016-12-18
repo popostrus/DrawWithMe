@@ -1,19 +1,17 @@
-var express= require('express');
-var app=express();
-
-
-app.get('/', function(request, response) {
-  response.render('index');
-});
-
-app.listen(process.env.PORT || 8080, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
-var server=app.listen("80");
+var express = require('express');
+var app = express();
+var http = require('http').Server(app);
+var io=require('socket.io')(http);
+var port = process.env.PORT || 3000;
 app.use(express.static('public'));
-console.log("The Socket is running.");
-var socket= require('socket.io');
-var io = socket(server);
+app.get('/',function (req,res){
+    res.sendFile(__dirname+'/public/index.html');
+});
+
+http.listen(port, function(){
+  console.log("Server running on port "+port);
+});
+
 var connectedPlayers=0;
 io.sockets.on("connection",newConnection);
 
